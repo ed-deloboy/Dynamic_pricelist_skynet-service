@@ -79,6 +79,18 @@
               ><span class="blue-text">Мы на карте</span></v-btn>
                 </v-col>
               </v-row>
+               <v-row no-gutters>
+                <v-col align="end">
+                  <v-btn 
+              color="white" 
+              elevation="0"
+              :href="mapLinkC"
+              target="_blank"
+              text
+              class="pr-0"
+              ><span class="blue-text">Мы на карте</span></v-btn>
+                </v-col>
+              </v-row>
               </v-card>
           </v-menu>
           </div>
@@ -124,16 +136,15 @@ export default {
     font-weight: 900 !important;
     font-size: 23px !important;
     line-height: 27px !important;
-    letter-spacing: 0.36em !important;
     color: #FFFFFF !important;
-     letter-spacing:.06em !important;
+    letter-spacing:.06em !important;
   }
 
   .sub-logo{
     font-family: Montserrat !important;
     font-style: normal !important;
-    font-weight: bold !important;
-    font-size: 14px !important;
+    font-weight: 400 !important;
+    font-size: .8rem !important;
     line-height: 16px !important;
     color: #FFFFFF !important;
     text-align: left !important;
