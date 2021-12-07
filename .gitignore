@@ -1,6 +1,11 @@
 .DS_Store
 node_modules
-/dist
+.\dist
+./dist
+\dist
+package-lock.json
+README.md
+
 
 
 # local env files
