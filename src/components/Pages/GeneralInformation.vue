@@ -300,8 +300,8 @@ export default {
     downloadFileListOfCitiesFromSite() {
       this.loading = true;
       console.log("Skynet");
-      // fetch("/listOfCities.xlsx", {
-        fetch("https://skynet-service.com/price/listOfCities.xlsx", {
+      fetch("/listOfCities.xlsx", {
+        // fetch("https://skynet-service.com/price/listOfCities.xlsx", {
         method: "GET",
       })
         .then((response) => response.blob())
@@ -462,6 +462,20 @@ export default {
 </script>
 
 <style>
+/* .v-application {
+} */
+
+body::-webkit-scrollbar {
+  width: 8px;
+  background: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar-thumb {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  background: linear-gradient(#b7ddf7, #1b69c2);
+}
+
 .dx-datagrid-nowrap,
 .dx-datagrid-nowrap .dx-header-row > td > .dx-datagrid-text-content {
   white-space: normal !important;

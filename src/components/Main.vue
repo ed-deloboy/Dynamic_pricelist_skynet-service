@@ -25,13 +25,13 @@
               text
               class="large-but"
               target="_blank"
-              ><span class="hover-span">Интернет магазин</span></v-btn
+              ><span class="hover-span">Интернет-магазин</span></v-btn
             >
             <v-btn
               color="white"
               max-width="300"
               elevation="0"
-              :href="mapLinkC"
+              href="https://skynet-service.com/contacts/"
               target="_blank"
               text
               class="large-but"
@@ -140,13 +140,13 @@ export default {
   text-align: left !important;
 }
 
-.hover-span {
+/* .hover-span {
   border-bottom: 1px solid transparent !important;
 }
 
 .hover-span:hover {
   border-bottom: 1px solid white !important;
-}
+} */
 
 .small-info {
   display: none;
