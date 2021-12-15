@@ -141,7 +141,7 @@
             />
             <DxColumn
               :group-index="0"
-              data-field="Название группы"
+              data-field="Полная группа"
               caption=""
               sort-order="asc"
             />
@@ -236,7 +236,7 @@ export default {
       if (e === undefined) {
         this.loading = true;
         this.rebornMass();
-        setTimeout(() => (this.loading = false), 3000);
+        setTimeout(() => (this.loading = false), 1500);
       } else {
         this.orders.splice(0, this.orders.length);
         if (this.model !== null) {
@@ -249,7 +249,7 @@ export default {
       this.loading = true;
       this.rebornMass();
       this.search = "";
-      setTimeout(() => (this.loading = false), 3000);
+      setTimeout(() => (this.loading = false), 1500);
     },
 
     rebornMass() {
@@ -281,7 +281,7 @@ export default {
               .toString()
               .toLowerCase()
               .includes(this.searchMass[j].toLowerCase()) ||
-            f["Название группы"]
+            f["Полная группа"]
               .toString()
               .toLowerCase()
               .includes(this.searchMass[j].toLowerCase())
@@ -380,7 +380,7 @@ export default {
         };
         fileReader.readAsBinaryString(file);
       }
-      setTimeout(() => (this.loading = false), 3000);
+      setTimeout(() => (this.loading = false), 1500);
     },
 
     /*Формирование файла в эксель*/
