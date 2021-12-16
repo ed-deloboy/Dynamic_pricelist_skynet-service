@@ -141,7 +141,7 @@
             />
             <DxColumn
               :group-index="0"
-              data-field="Полная группа"
+              data-field="Название группы"
               caption=""
               sort-order="asc"
             />
@@ -236,7 +236,7 @@ export default {
       if (e === undefined) {
         this.loading = true;
         this.rebornMass();
-        setTimeout(() => (this.loading = false), 1500);
+        setTimeout(() => (this.loading = false), 3000);
       } else {
         this.orders.splice(0, this.orders.length);
         if (this.model !== null) {
@@ -249,7 +249,7 @@ export default {
       this.loading = true;
       this.rebornMass();
       this.search = "";
-      setTimeout(() => (this.loading = false), 1500);
+      setTimeout(() => (this.loading = false), 3000);
     },
 
     rebornMass() {
@@ -281,7 +281,7 @@ export default {
               .toString()
               .toLowerCase()
               .includes(this.searchMass[j].toLowerCase()) ||
-            f["Полная группа"]
+            f["Название группы"]
               .toString()
               .toLowerCase()
               .includes(this.searchMass[j].toLowerCase())
@@ -301,8 +301,7 @@ export default {
       this.loading = true;
       console.log("Skynet");
       // fetch("/listOfCities.xlsx", {
-      fetch("https://skynet-service.com/price/listOfCities.xlsx", {
-        method: "GET",
+        fetch("https://skynet-service.com/price/listOfCities.xlsx", {
       })
         .then((response) => response.blob())
         .then((blob) => {
@@ -380,7 +379,7 @@ export default {
         };
         fileReader.readAsBinaryString(file);
       }
-      setTimeout(() => (this.loading = false), 1500);
+      setTimeout(() => (this.loading = false), 3000);
     },
 
     /*Формирование файла в эксель*/
@@ -462,20 +461,6 @@ export default {
 </script>
 
 <style>
-/* .v-application {
-} */
-
-body::-webkit-scrollbar {
-  width: 8px;
-  background: rgb(255, 255, 255);
-}
-
-body::-webkit-scrollbar-thumb {
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 4px;
-  background: linear-gradient(#b7ddf7, #1b69c2);
-}
-
 .dx-datagrid-nowrap,
 .dx-datagrid-nowrap .dx-header-row > td > .dx-datagrid-text-content {
   white-space: normal !important;
