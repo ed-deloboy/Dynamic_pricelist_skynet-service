@@ -225,6 +225,7 @@ export default {
     model: null,
     search: "",
     searchMass: [],
+    cashClear: false,
   }),
 
   methods: {
@@ -299,9 +300,9 @@ export default {
 
     downloadFileListOfCitiesFromSite() {
       this.loading = true;
-      console.log("Skynet");
-      // fetch("/listOfCities.xlsx", {
-        fetch("https://skynet-service.com/price/listOfCities.xlsx", {
+      console.log("Skynettt");
+      fetch("/listOfCities.xlsx", {
+        // fetch("https://skynet-service.com/price/listOfCities.xlsx", {
       })
         .then((response) => response.blob())
         .then((blob) => {
@@ -445,15 +446,52 @@ export default {
       });
       e.cancel = true;
     },
+    //cache
+    reloadCash() {
+      var curentDate = new Date();
+      var cookieValue = document.cookie
+        .split(";")
+        .filter((f) => f.match("cashClear"));
+      cookieValue = cookieValue[0].split("=")[1];
+
+      if (curentDate.getHours() == "3") {
+        if (cookieValue === "false") {
+          this.set_cookie("cashClear", true);
+          window.location.reload(true);
+        }
+      } else {
+        this.set_cookie("cashClear", false);
+      }
+    },
+
+    createCookie() {
+      var cookieValue = document.cookie
+        .split(";")
+        .filter((f) => f.match("cashClear"));
+      if (cookieValue.length == 0) {
+        this.set_cookie("cashClear", false);
+      }
+    },
+
+    set_cookie(name, value) {
+      document.cookie = name + "=" + value + "; Path=/;";
+    },
+
+    delete_cookie(name) {
+      document.cookie =
+        name + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+    },
   },
 
   mounted() {
     this.downloadFileListOfCitiesFromSite();
+    this.reloadCash();
   },
 
   created() {
     loadMessages(ruMessages);
     locale(navigator.language);
+    this.createCookie();
   },
 
   computed: {},
