@@ -301,8 +301,8 @@ export default {
     downloadFileListOfCitiesFromSite() {
       this.loading = true;
       console.log("Skynet");
-      fetch("/listOfCities.xlsx", {})
-        // fetch("https://skynet-service.com/price/listOfCities.xlsx", {})
+      // fetch("/listOfCities.xlsx", {})
+      fetch("https://skynet-service.com/price/listOfCities.xlsx", {})
         .then((response) => response.blob())
         .then((blob) => {
           this.fileToJsonCity(this.blobToFile(blob, "City"));
@@ -736,6 +736,42 @@ td {
 .v-icon.v-icon {
   font-size: 1.1rem;
 }
+
+/* preload start */
+.v-dialog {
+  width: 170px !important;
+  height: 170px !important;
+}
+.load-card {
+  width: 170px !important;
+  height: 170px !important;
+  padding: 0 !important;
+}
+.load-card {
+  background-image: url("/preload.svg");
+  background-size: 48%;
+  background-position: center center;
+}
+.v-progress-circular {
+  width: 170px !important;
+  height: 170px !important;
+  overflow: hidden;
+}
+
+.v-progress-circular > svg {
+  width: 100% !important;
+  height: 100% !important;
+  background-image: url("/preload-circle.svg");
+  background-size: 85%;
+  background-position: center center;
+}
+.v-progress-circular--indeterminate > svg {
+  animation: progress-circular-rotate 6s linear infinite;
+}
+.v-progress-circular__overlay {
+  stroke: none;
+}
+/* preload end */
 
 @media screen and (max-width: 992px) {
   .small-close {
