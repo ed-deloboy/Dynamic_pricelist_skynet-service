@@ -498,6 +498,16 @@ export default {
 </script>
 
 <style>
+body::-webkit-scrollbar {
+  width: 8px;
+  background: rgb(248, 248, 248);
+}
+
+body::-webkit-scrollbar-thumb {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  background: linear-gradient(#b7ddf7, #1b69c2);
+}
 .dx-datagrid-nowrap,
 .dx-datagrid-nowrap .dx-header-row > td > .dx-datagrid-text-content {
   white-space: normal !important;
@@ -748,7 +758,7 @@ td {
   padding: 0 !important;
 }
 .load-card {
-  background-image: url("/preload.svg");
+  /* background-image: url("preload.svg"); */
   background-size: 48%;
   background-position: center center;
 }
@@ -761,7 +771,7 @@ td {
 .v-progress-circular > svg {
   width: 100% !important;
   height: 100% !important;
-  background-image: url("/preload-circle.svg");
+  /* background-image: url("preload-circle.svg"); */
   background-size: 85%;
   background-position: center center;
 }
