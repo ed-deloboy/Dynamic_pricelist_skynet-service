@@ -300,7 +300,7 @@ export default {
 
     downloadFileListOfCitiesFromSite() {
       this.loading = true;
-      console.log("Skynettt");
+      console.log("Skynet");
       fetch("/listOfCities.xlsx", {
         // fetch("https://skynet-service.com/price/listOfCities.xlsx", {
       })
