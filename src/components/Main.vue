@@ -25,7 +25,7 @@
               text
               class="large-but"
               target="_blank"
-              ><span class="hover-span">Режим работы</span></v-btn
+              ><span class="hover-span">График работы</span></v-btn
             >
             <v-btn
               color="white"
