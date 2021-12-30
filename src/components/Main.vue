@@ -17,6 +17,16 @@
           </v-col>
 
           <v-col md="auto" class="pt-2 large-info">
+             <v-btn
+              color="white"
+              href="https://shop.skynet-service.com/news?blogarticle_id=16"
+              max-width="300"
+              elevation="0"
+              text
+              class="large-but"
+              target="_blank"
+              ><span class="hover-span">Режим работы</span></v-btn
+            >
             <v-btn
               color="white"
               href="https://shop.skynet-service.com/"

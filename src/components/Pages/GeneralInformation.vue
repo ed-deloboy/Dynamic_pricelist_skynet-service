@@ -707,7 +707,7 @@ td {
 }
 
 .v-btn__content {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 400;
   letter-spacing: 0.02rem;
   text-transform: initial !important;
