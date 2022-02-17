@@ -593,14 +593,32 @@ body::-webkit-scrollbar-thumb {
 .vendor-code {
   color: #b4c7dc;
 }
-
-td {
-  border: 1px solid #ddd !important;
+table{
+  border: none !important;
+}
+tbody{
+  border: none !important;
+}
+tr{
+  border: none !important;
+  transition: background .2s ease-in-out;
+}
+tr:nth-child(1n) {
+background: rgb(248, 248, 248);
+}
+tr:nth-child(2n) {
+background: rgb(233, 233, 233);
 }
 
 tr:hover{
-  background: #0a74c020;
+    background: #0a74c02e;
+  }
+
+td {
+  border: 1px solid #ddd !important;
+  border: none !important;
 }
+
 td:focus{
   background: #0a74c031;
 }
@@ -787,6 +805,15 @@ td:focus{
 }
 .v-progress-circular__overlay {
   stroke: none;
+}
+
+.dx-datagrid-headers,
+.dx-datagrid-content,
+.dx-datagrid-rowsview{
+  border: none !important;
+}
+.dx-command-adaptive{
+  background: #fff;
 }
 /* preload end */
 
