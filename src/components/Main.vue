@@ -16,17 +16,7 @@
             </v-row>
           </v-col>
 
-          <v-col md="auto" class="pt-2 large-info">
-             <v-btn
-              color="white"
-              href="https://shop.skynet-service.com/news?blogarticle_id=16"
-              max-width="300"
-              elevation="0"
-              text
-              class="large-but"
-              target="_blank"
-              ><span class="hover-span">График работы</span></v-btn
-            >
+          <v-col md="auto" class="pt-3 large-info">
             <v-btn
               color="white"
               href="https://shop.skynet-service.com/"
@@ -47,6 +37,16 @@
               class="large-but"
               ><span class="hover-span">Мы на карте</span></v-btn
             >
+            <v-btn
+              color="white"
+              href="https://shop.skynet-service.com/news"
+              max-width="300"
+              elevation="0"
+              text
+              class="large-but"
+              target="_blank"
+              ><span class="hover-span">Новости</span></v-btn
+            >
           </v-col>
           <div class="small-info">
             <v-menu offset-y>
@@ -62,7 +62,7 @@
                   <v-icon v-if="close">fas fa-times</v-icon>
                 </v-btn>
               </template>
-              <v-card elevation="2" class="px-2 py-2">
+              <v-card elevation="2" class="px-5 py-5">
                 <v-row no-gutters
                   ><v-col align="end"
                     ><span class="menu-text">Меню</span></v-col
@@ -77,8 +77,8 @@
                       text
                       class="pr-0"
                       target="_blank"
-                      ><span class="blue-text">Интернет магазин</span></v-btn
-                    >
+                      ><span class="blue-text">Интернет-магазин</span>
+                      </v-btn>
                   </v-col>
                 </v-row>
                 <v-row no-gutters>
@@ -91,6 +91,19 @@
                       text
                       class="pr-0"
                       ><span class="blue-text">Мы на карте</span></v-btn
+                    >
+                  </v-col>
+                </v-row>
+                    <v-row no-gutters>
+                  <v-col align="end">
+                    <v-btn
+                      color="white"
+                      elevation="0"
+                      href="https://shop.skynet-service.com/news"
+                      target="_blank"
+                      text
+                      class="pr-0"
+                      ><span class="blue-text">Новости</span></v-btn
                     >
                   </v-col>
                 </v-row>
@@ -182,7 +195,7 @@ export default {
   color: #000000 !important;
 }
 
-@media screen and (max-width: 711px) {
+@media screen and (max-width: 802px) {
   .hover-span {
     display: none;
   }

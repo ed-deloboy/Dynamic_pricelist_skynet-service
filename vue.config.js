@@ -1,5 +1,5 @@
 module.exports = {
-    "publicPath": "/price/pricelist/",
+    "publicPath": "/pricelist/",
     "outputDir": ".\\dist",
     "productionSourceMap": false,
     "lintOnSave": false,

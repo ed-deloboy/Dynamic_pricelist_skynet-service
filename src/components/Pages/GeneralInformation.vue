@@ -300,7 +300,7 @@ export default {
 
     downloadFileListOfCitiesFromSite() {
       this.loading = true;
-      console.log("Skynet");
+      console.log("Скайнет");
       // fetch("/listOfCities.xlsx", {})
       fetch("https://skynet-service.com/price/listOfCities.xlsx", {})
         .then((response) => response.blob())
@@ -596,6 +596,13 @@ body::-webkit-scrollbar-thumb {
 
 td {
   border: 1px solid #ddd !important;
+}
+
+tr:hover{
+  background: #0a74c020;
+}
+td:focus{
+  background: #0a74c031;
 }
 
 .dx-button-mode-contained-copy {
