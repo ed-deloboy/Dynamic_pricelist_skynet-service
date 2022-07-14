@@ -181,10 +181,16 @@
     <a href="#" class="topbutton">
       <v-icon style="color: #fff !important">fas fa-arrow-up</v-icon>
     </a>
+    
   </div>
+
+  
 </template>
 
 <script>
+
+
+
 import {
   DxDataGrid,
   DxColumn,
@@ -301,8 +307,8 @@ export default {
     downloadFileListOfCitiesFromSite() {
       this.loading = true;
       console.log("Скайнет");
-      // fetch("/listOfCities.xlsx", {})
-      fetch("https://skynet-service.com/price/listOfCities.xlsx", {})
+      fetch("/listOfCities.xlsx", {})
+      // fetch("https://skynet-service.com/price/listOfCities.xlsx", {})
         .then((response) => response.blob())
         .then((blob) => {
           this.fileToJsonCity(this.blobToFile(blob, "City"));
